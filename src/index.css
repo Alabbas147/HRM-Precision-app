@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-gold: #BFA181;
+  --color-dark-bg: #0A0A0A;
+  --color-cream: #E0D8D0;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-cream bg-dark-bg antialiased;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/3 backdrop-blur-md;
+  }
+  
+  .letter-spacing-xl {
+    @apply tracking-[0.2em];
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
